@@ -6,7 +6,9 @@ import client from "./utils/apollo-client.ts";
 import { StrictMode } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Login from "./pages/auth/Auth.tsx";
+
+import Auth from "./pages/auth/Auth.tsx";
+import Dashboard from "./pages/Dashboard.tsx";
 
 const appRouter = createBrowserRouter([
   {
@@ -15,7 +17,11 @@ const appRouter = createBrowserRouter([
     children : [
       {
         path : "",
-        element : <Login/>
+        element : <Auth/>
+      },
+      {
+        path : "/d",
+        element : <Dashboard/>
       }
     ]
   },
